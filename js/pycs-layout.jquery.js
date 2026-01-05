@@ -135,6 +135,10 @@
 	totalWidth += (parseInt($(items[i]).attr("data-pycs-vwidth")) +
 		       settings.gutter);
       }
+		
+	  if (totalWidth < containerWidth) {
+		return [[...items]];
+	  }
       rows_number = Math.round(totalWidth / containerWidth);
 
       /* all the elements on the same row. */
